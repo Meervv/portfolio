@@ -8,7 +8,8 @@ function Home() {
     useEffect(() => {
         axios.get('http://localhost:3001/articles')
         .then((response) => {
-            setListOfArticles(response.data);
+          console.log(response.data);
+          setListOfArticles(response.data);
         })
     }, []);
 
@@ -19,7 +20,7 @@ function Home() {
               <div className='article'>
                 <div className='title'>{value.title}</div>
                 <div className='body'>{value.content}</div>
-                <div className='date'>{value.date}</div>
+                <div className='footer'>{value.date}</div>
               </div>
             );
           })}
