@@ -1,3 +1,4 @@
+/* Styles de base */
 .navbar {
     display: flex;
     justify-content: center;
@@ -6,6 +7,7 @@
     padding: 10px;
     background-color: #333;
     color: white;
+    position: relative; /* Pour permettre le positionnement absolu du menu hamburger */
 }
 
 .navbar ul {
@@ -30,7 +32,7 @@
 }
 
 .navbar .darkmode {
-    margin-left: auto; /* Positionne le bouton dark mode à droite */
+    margin-left: 50px; /* Positionne le bouton dark mode à droite */
 }
 
 .navbar button {
@@ -38,4 +40,63 @@
     border: none;
     color: white;
     cursor: pointer;
+}
+
+/* Styles pour les petits écrans */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .navbar ul {
+        display: none; /* Cache les éléments de la liste */
+        flex-direction: column;
+        align-items: center;
+        width: 300px;
+        margin: 0;
+        padding: 0;
+        background-color: #333; /* Fond du menu */
+        position: absolute;
+        top: 60px; /* Positionne le menu en dessous de la navbar */
+        z-index: 1000; /* Assure que le menu soit au-dessus des autres éléments */
+    }
+
+    .navbar ul .brand {
+        margin: 0;
+    }
+    
+    .navbar.active ul {
+        display: flex; /* Affiche le menu quand la classe 'active' est ajoutée */
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .navbar ul li {
+        padding: 15px 0;
+        text-align: center;
+    }
+
+    .navbar .darkmode {
+        display: none; /* Cache le bouton dark mode dans le menu mobile */
+    }
+
+    .navbar button.menu-toggle {
+        display: block;
+        background: none;
+        border: none;
+        color: white;
+        top: 10px;
+        left: 50%;
+        font-size: 24px;
+        cursor: pointer;
+        transform: translateX(-50%);
+    }
+}
+
+/* Masquer le bouton hamburger sur les grands écrans */
+@media (min-width: 769px) {
+    .navbar button.menu-toggle {
+        display: none; /* Masque le bouton hamburger sur les grands écrans */
+    }
 }
