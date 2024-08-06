@@ -1,0 +1,41 @@
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+}
+
+.navbar ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    gap: 20px;
+}
+
+.navbar li {
+    padding: 0 10px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+}
+
+.navbar .brand {
+    margin-right: auto; /* Positionne l'élément de marque à gauche */
+}
+
+.navbar .darkmode {
+    margin-left: auto; /* Positionne le bouton dark mode à droite */
+}
+
+.navbar button {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}

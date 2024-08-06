@@ -2,6 +2,7 @@
 
 import ContrastIcon from '@mui/icons-material/Contrast';
 import { toggleDarkMode } from '../../utils/darkmode';
+import '../../styles/nav.css';
 
 export default function Navbar() {
     return (

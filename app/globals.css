@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url("https://fonts.googleapis.com/css?family=Raleway:900&display=swap");
+
 body {
     background-color: #f0f0f0;
     color: #333;
@@ -15,108 +17,4 @@ body {
 body.dark-mode {
     background-color: #333;
     color: #f0f0f0;
-}
-
-.navbar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    padding: 10px;
-    background-color: #333;
-    color: white;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-body.dark-mode .navbar {
-    background-color: #555; /* Couleur de la barre de navigation en mode sombre */
-    color: #f0f0f0;
-}
-
-.navbar ul {
-    display: flex;
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    gap: 20px;
-}
-
-.navbar li {
-    padding: 0 10px;
-}
-
-.navbar a {
-    color: white;
-    text-decoration: none;
-}
-
-body.dark-mode .navbar a {
-    color: #f0f0f0;
-}
-
-.brand {
-    position: absolute;
-    left: 10px;
-}
-
-.darkmode {
-    position: absolute;
-    right: 10px;
-}
-
-button {
-    background: none;
-    border: none;
-    color: inherit;
-    cursor: pointer;
-    font: inherit;
-    padding: 0;
-}
-
-.linked {
-    font-weight: 700;
-    text-decoration: none;
-    color: #000;
-}
-
-.presentation {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-    margin-top: 30px;
-}
-
-.presentation_content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.presentation img {
-    border-radius: 50%;
-    width: 200px;
-    height: 200px; /* Ensure height and width are equal for a perfect circle */
-    object-fit: cover;
-    margin-bottom: 20px;
-}
-
-.presentation h1 {
-    margin: 20px 0;
-    font-weight: 700;
-    font-size: large;
-}
-
-.presentation p {
-    margin: 10px 0;
-}
-
-.presentation a.linked {
-    color: #007BFF;
-    text-decoration: none;
-}
-
-.presentation a.linked:hover {
-    text-decoration: underline;
 }
