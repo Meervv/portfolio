@@ -8,6 +8,7 @@
     background-color: #333;
     color: white;
     position: relative; /* Pour permettre le positionnement absolu du menu hamburger */
+    width: 100%;
 }
 
 .navbar ul {
